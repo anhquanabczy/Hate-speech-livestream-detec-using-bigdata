@@ -10,19 +10,21 @@ Mục tiêu cốt lõi là nhận diện các cuộc tấn công tập thể (co
   *Võ Anh Quân - 22521192
   * Võ Minh Quyền - 22521227
 
-## 3. Kiến trúc hệ thống(img/pipeline.png)
+## 3. Kiến trúc hệ thống
+![quy trình](img/pipeline.png)
 Hệ thống sử dụng kiến trúc lai để tối ưu hóa tài nguyên phần cứng, đặc biệt là tránh lỗi tràn bộ nhớ (Out of Memory) trên các cụm Spark:
 * **Hạ tầng Dữ liệu (Docker Environment):** Các thành phần như Kafka Broker, Apache Spark Streaming và MongoDB được đóng gói và chạy trên Docker Containers.
 * **Model Server (FastAPI):** Mô hình Deep Learning được tách ra thành một API Service độc lập bằng FastAPI chạy trên máy chủ (Local), giúp chỉ load model một lần duy nhất.
 * **Giao diện giám sát:** Sử dụng Streamlit để xây dựng Dashboard cảnh báo.
 
-## 4. Tập dữ liệu & Tiền xử lý(img/type_attack.png)
+## 4. Tập dữ liệu & Tiền xử lý
+![type attack](img/type_attack.png)
 * **Dataset:** Gồm 15.298 câu bình luận thực tế được thu thập từ Facebook, YouTube và Reddit.
 * **Tiền xử lý:**
   * Khôi phục dấu tiếng Việt tự động bằng mô hình XLM-Roberta (vietnamese-accent-marker).
   * Chuẩn hóa từ viết tắt, teencode và loại bỏ nhiễu (URL, emoji).
   * Tách từ (Word Segmentation) bằng thư viện PyVi và gán nhãn từ loại bằng Underthesea.
-(img/Phan_phoi.png)
+![phân phối dữ liệu](img/Phan_phoi.png)
 ## 5. Kiến trúc Mô hình
 Hệ thống triển khai hai kiến trúc mô hình học sâu dựa trên nền tảng Transformers:
 1. **Mô hình Lai Multi-task (PHOBERT-CNN-BIGRU):** Tận dụng khả năng hiểu ngữ nghĩa của PhoBERT, trích xuất đặc trưng cục bộ bằng CNN đa tỷ lệ (Multi-scale) và nắm bắt ngữ cảnh tuần tự bằng Bi-GRU. Mô hình phân loại đồng thời 3 khía cạnh: Cá nhân (Individual), Nhóm (Group), và Xã hội (Societal).
