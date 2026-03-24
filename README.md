@@ -1,13 +1,14 @@
-# [cite_start]Phát Hiện Bình Luận Ngôn Từ Thù Ghét Và Giám Sát, Phát Hiện Chủ Đề Bị Tấn Công [cite: 4]
+# Phát Hiện Bình Luận Ngôn Từ Thù Ghét Và Giám Sát, Phát Hiện Chủ Đề Bị Tấn Công 
 
 ## 1. Giới thiệu chung
-[cite_start]Dự án này là đồ án môn học SE363 [cite: 5][cite_start], tập trung xây dựng một quy trình tự động phân tích bình luận tiếng Việt trên mạng xã hội nhằm phát hiện và phân loại chủ đề thảo luận[cite: 93]. [cite_start]Mục tiêu cốt lõi là nhận diện các cuộc tấn công tập thể (collective attacks) [cite: 43][cite_start], đi sâu vào phân loại 19 loại hình tấn công chi tiết (như Regionalism, Body Shaming, Politics,...)[cite: 87].
+Dự án này là đồ án môn học SE363, tập trung xây dựng một quy trình tự động phân tích bình luận tiếng Việt trên mạng xã hội nhằm phát hiện và phân loại chủ đề thảo luận. 
+Mục tiêu cốt lõi là nhận diện các cuộc tấn công tập thể (collective attacks), đi sâu vào phân loại 19 loại hình tấn công chi tiết (như Regionalism, Body Shaming, Politics,...)
 
 ## 2. Thông tin nhóm thực hiện
-* [cite_start]**Giảng viên hướng dẫn:** TS.Đỗ Trọng Hợp [cite: 6]
-* [cite_start]**Thành viên phát triển:** [cite: 7]
-  * [cite_start]Võ Anh Quân - 22521192 [cite: 8]
-  * [cite_start]Võ Minh Quyền - 22521227 [cite: 9]
+* **Giảng viên hướng dẫn:** TS.Đỗ Trọng Hợp 
+***Thành viên phát triển:**
+  *Võ Anh Quân - 22521192
+  * Võ Minh Quyền - 22521227
 
 ## 3. Kiến trúc hệ thống
 [cite_start]Hệ thống sử dụng kiến trúc lai để tối ưu hóa tài nguyên phần cứng, đặc biệt là tránh lỗi tràn bộ nhớ (Out of Memory) trên các cụm Spark[cite: 236, 239, 240]:
